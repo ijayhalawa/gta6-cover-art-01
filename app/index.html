@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon Coast Cover Studio</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main class="app">
+  <section class="controls">
+    <h1>Neon Coast Cover Studio</h1>
+    <p class="tagline">Your photo, a caption, and one sunset heist — turned into GTA-style cover art. Everything runs in your browser; your photos never leave your machine.</p>
+
+    <h2>Panels</h2>
+    <p class="hint">Load a photo into any panel, or pick a built-in scene. Zoom and Move crop a loaded photo.</p>
+    <label class="check"><input id="onePhoto" type="checkbox"> One photo fills every panel</label>
+    <div id="panels"></div>
+
+    <h2>Lettering</h2>
+    <label>Title <input id="title" type="text" maxlength="24" value="Neon Coast"></label>
+    <label>Subtitle <input id="subtitle" type="text" maxlength="32" value="Sunset Heist"></label>
+
+    <h2>Look</h2>
+    <label>Layout <select id="layout"></select></label>
+    <label>Grade <select id="grade"></select></label>
+    <label>Export size <select id="size"></select></label>
+
+    <button id="export" type="button">Export PNG</button>
+    <p id="status" role="status"></p>
+    <p id="panelCount" class="muted"></p>
+    <p id="selftest" class="muted"></p>
+    <p class="muted">Original art only: Neon Coast, Mara Voss and Dante Reyes are invented. No Rockstar Games artwork, logo or font is used. Lettering: Anton and Pacifico under the SIL Open Font License.</p>
+  </section>
+  <section class="stage">
+    <canvas id="preview" width="1080" height="1350" aria-label="Live cover preview"></canvas>
+  </section>
+</main>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
